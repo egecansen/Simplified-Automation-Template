@@ -29,4 +29,4 @@ After the run is completed you can find the generated results in the target dire
 
 - Tests can be run headless by modifying the headless property in _test.properties_.
 
-- To be able to use ```@Firefox``` change ```allow-remote-origin``` to ```false``` on _test.properties_ file.
+- To be able to use ```@Firefox``` change ```allow-remote-origin``` to ```false``` in _test.properties_ file.
