@@ -1,11 +1,12 @@
 # spriteCloud-TA-assignment
 
 The Web-UI part of the project is based on Selenium & Cucumber and the API part is based on Okhttp & Retrofit.
-
 I used open-source libraries that I contribute to, such as Pickleib and Java-Utilities.
+
 The CommonSteps class stores the generic UI steps and saves us from the repeated code.
 The ObjectRepository class is used for storing the page object instances; the page objects are automatically instantiated when the element of that page is interacted with.
 The PageObject class is for overwriting Selenium's default field decorator to be able to use WebComponents.
+
 You can find the cucumber test reports under the reports directory in resources folder.
 After the run is completed you can find the generated results in the target directory under the reports folder.
 
