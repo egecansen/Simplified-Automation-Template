@@ -96,12 +96,14 @@ public class ReqresAPISteps {
         Assert.assertNotNull("updatedAt is null!", updateUserResponse.getUpdatedAt());
         log.success("The updatedAt verified as not null");
     }
+
     @Given("Delete user with id {}")
     public void deleteUser(String id) {
         id = StringUtilities.contextCheck(id);
         reqres.deleteUser(id);
         log.success("User is deleted successfully");
     }
+
     @Given("Create and verify user with {} seconds delay with following:")
     public void createDelayedUser(String seconds, DataTable table) {
         Map<String, String> tableMap = table.asMap();
@@ -122,6 +124,7 @@ public class ReqresAPISteps {
         log.info("Job is verified as " + job);
 
     }
+
     @Given("Verify the error message is: {}")
     public void verifyTheLoginError(String errorMessage) {
         LoginErrorResponse loginErrorResponse = ContextStore.get("loginErrorResponse");
