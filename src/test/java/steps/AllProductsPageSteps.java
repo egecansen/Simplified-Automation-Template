@@ -19,7 +19,7 @@ public class AllProductsPageSteps {
         List<String> productNames = new ArrayList<>();
         for (WebElement productTitle : allProductsPage.productTitles)
             productNames.add(productTitle.getText());
-        
+
         ContextStore.put("productNames", productNames);
         List<String> sorted = new ArrayList<>(productNames);
         sorted.sort(Comparator.reverseOrder());
