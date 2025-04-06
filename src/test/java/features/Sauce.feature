@@ -3,7 +3,6 @@ Feature: Sauce
   @Web-UI @SCN-Sauce-1
   Scenario: Add 2 items to the shopping cart and checkout
     * Navigate to url: https://www.saucedemo.com/
-    * Save accepted usernames to context
     * Verify presence of element userNameInput on the LoginPage
     * Click the userNameInput on the LoginPage
     * Fill form input on the LoginPage
@@ -33,7 +32,6 @@ Feature: Sauce
   @Web-UI @SCN-Sauce-2
   Scenario: Sort items A-Z and verify the order
     * Navigate to url: https://www.saucedemo.com/
-    * Save accepted usernames to context
     * Verify presence of element userNameInput on the LoginPage
     * Click the userNameInput on the LoginPage
     * Fill form input on the LoginPage
@@ -49,7 +47,6 @@ Feature: Sauce
   @Web-UI @SCN-Sauce-3
   Scenario: Negative login flow
     * Navigate to url: https://www.saucedemo.com/
-    * Save accepted usernames to context
     * Verify presence of element userNameInput on the LoginPage
     * Click the userNameInput on the LoginPage
     * Fill form input on the LoginPage
