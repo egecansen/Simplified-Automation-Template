@@ -1,6 +1,5 @@
 # spriteCloud-TA-assignment
 
-## Description
 The Web-UI part of the project is based on Selenium & Cucumber and the API part is based on Okhttp & Retrofit.
 I used open-source libraries that I contribute to, such as Pickleib and Java-Utilities.
 The CommonSteps class stores the generic UI steps and saves us from the repeated code.
