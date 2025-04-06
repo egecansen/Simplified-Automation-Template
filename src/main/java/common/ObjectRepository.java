@@ -7,6 +7,7 @@ public class ObjectRepository implements PageRepository {
 
     LoginPage loginPage;
     ProductPage productPage;
+    AllProductsPage allProductsPage;
     ShoppingCartPage shoppingCartPage;
     YourInformationPage yourInformationPage;
 

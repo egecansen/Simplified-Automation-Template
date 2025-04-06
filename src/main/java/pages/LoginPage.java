@@ -18,6 +18,9 @@ public class LoginPage extends PageObject {
     @FindBy(css = "[data-test=\"login-button\"]")
     public WebElement loginButton;
 
+    @FindBy(css = ".error-message-container.error")
+    public WebElement loginErrorMessage;
+
     @FindBy(css = "[data-test=\"login-credentials\"] br:first-of-type")
     public WebElement userName;
 
