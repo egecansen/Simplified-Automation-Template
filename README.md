@@ -1,11 +1,16 @@
 # spriteCloud-TA-assignment
-### Description
 
-Web-UThe part of the project is based on Selenium & Cucumber and the API part is based on Okhttp & Retrofit.
+The Web-UI part of the project is based on Selenium & Cucumber and the API part is based on Okhttp & Retrofit.
 I used open-source libraries that I contribute to, such as Pickleib and Java-Utilities.
 The CommonSteps class stores the generic UI steps and saves us from the repeated code.
-The ObjectRepository class is used for storing the page object instances; the page objects are instantiated when we are interaction to that page.
+The ObjectRepository class is used for storing the page object instances; the page objects are automatically instantiated when the elements of that pages are interacted with.
 The PageObject class is for overwriting Selenium's default field decorator to be able to use WebComponents.
+You can find the cucumber test reports under the reports directory in resources folder.
+After the run is completed you can find the generated results in the target directory under the reports folder.
+
+## Requirements
+- JDK 17
+- Maven 3
 
 ## Run
 
@@ -20,6 +25,8 @@ The PageObject class is for overwriting Selenium's default field decorator to be
     ```yml
     mvn clean test -q -Dcucumber.filter.tags="@SCN-Reqres-1"
     ```
-- Deafult driver type is Chrome. To select a driver type, add a driver tag in scenarios.
+- Deafult driver type is Chrome. To select a browser type, add a browser tag in scenarios. Supported browsers are ```@Firefox```, ```@Safari``` and ```@Chrome```. 
 
-- Tests can be run headless by modifying the headless property in _test.properties_.
+- Tests can be run headless by modifying the headless property in _test.properties_. This option is works only with ```@Chrome```.
+
+- To be able to use ```@Firefox``` change ```allow-remote-origin=false``` on _test.properties_ file.

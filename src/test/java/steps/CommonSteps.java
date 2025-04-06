@@ -18,7 +18,6 @@ import pickleib.utilities.steps.PageObjectStepUtilities;
 import pickleib.web.interactions.WebInteractions;
 import java.util.ArrayList;
 import java.util.List;
-import static steps.Hooks.initialiseBrowser;
 import static utils.StringUtilities.Color.*;
 import static utils.StringUtilities.*;
 
@@ -28,8 +27,7 @@ public class CommonSteps extends PageObjectStepUtilities<ObjectRepository> {
 
     public CommonSteps() {
         super(ObjectRepository.class);
-        if (initialiseBrowser)
-            webInteractions = new WebInteractions();
+        webInteractions = new WebInteractions();
     }
 
     /**
