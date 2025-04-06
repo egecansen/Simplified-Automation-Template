@@ -3,21 +3,14 @@ package steps;
 import common.PageObject;
 import context.ContextStore;
 import io.cucumber.java.*;
-import pickleib.mobile.driver.PickleibAppiumDriver;
 import pickleib.utilities.screenshot.ScreenCaptureUtility;
 import pickleib.web.driver.PickleibWebDriver;
 import pickleib.web.driver.WebDriverFactory;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 
 import static utils.StringUtilities.Color.PURPLE;
 import static utils.StringUtilities.highlighted;
 
 public class Hooks extends PageObject {
-
 
     public Scenario scenario;
     public static boolean initialiseBrowser;

@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LoginPageSteps {
+
     LoginPage loginPage = new LoginPage();
 
     @Given("Save accepted usernames to context")

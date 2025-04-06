@@ -13,7 +13,8 @@ public class OverviewPageSteps {
     public void validateTheItemTotalAmount() {
         Double expectedAmount = Double.parseDouble(ContextStore.get("Sauce Labs Bike Light Price")) + Double.parseDouble(ContextStore.get("Test.allTheThings() T-Shirt (Red) Price"));
         Double actualAmount = Double.parseDouble(overviewPage.itemTotalAmount.getText().replaceAll("Item total: \\$", ""));
-        Assert.assertEquals("Total amounts does not match!", expectedAmount,actualAmount);
+        Assert.assertEquals("Total amounts does not match!", expectedAmount, actualAmount);
         overviewPage.log.success("Total amounts match!");
     }
+
 }

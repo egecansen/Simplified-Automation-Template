@@ -9,8 +9,4 @@ public class OverviewPage extends PageObject {
     @FindBy(css = ".summary_subtotal_label")
     public WebElement itemTotalAmount;
 
-    public void validateTotalAmount() {
-
-    }
-
 }

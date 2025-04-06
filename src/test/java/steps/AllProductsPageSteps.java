@@ -19,11 +19,12 @@ public class AllProductsPageSteps {
         List<String> productNames = new ArrayList<>();
         for (WebElement productTitle : allProductsPage.productTitles)
             productNames.add(productTitle.getText());
+        
         ContextStore.put("productNames", productNames);
-
         List<String> sorted = new ArrayList<>(productNames);
         sorted.sort(Comparator.reverseOrder());
         Assert.assertEquals("The order of the lists are not match!", productNames, sorted);
         allProductsPage.log.success("The product list is in an alphabetical order 2");
     }
+
 }

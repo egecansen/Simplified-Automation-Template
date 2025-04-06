@@ -8,7 +8,6 @@ public class ShoppingCartPage extends PageObject {
 
     @FindBy(id = "checkout")
     public WebElement checkOutButton;
-
     @FindBy(css = ".cart_quantity_label")
     public WebElement cartQuantityLabel;
 

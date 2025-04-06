@@ -24,7 +24,7 @@ Feature: Reqres API
   Scenario: Update random user
     * Get user list from page 2
     * Update user with id CONTEXT-randomUserId with following
-      | name | Zan       |
+      | name | Can       |
       | job  | Fisherman |
     * Verify the update user response body
 
@@ -36,8 +36,8 @@ Feature: Reqres API
   @API-Test @SCN-Reqres-6
   Scenario: Create delayed user
     * Create and verify user with 3 seconds delay with following:
-      | name | John   |
-      | job  | Farmer |
+      | name | Mike   |
+      | job  | Tailor |
 
   @API-Test @SCN-Reqres-7
   Scenario: Login with a non-existed user

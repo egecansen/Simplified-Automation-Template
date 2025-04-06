@@ -1,7 +1,6 @@
 package steps;
 
 import api_assured.ResponsePair;
-import api_assured.exceptions.FailedCallException;
 import context.ContextStore;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -116,7 +115,6 @@ public class ReqresAPISteps {
         long timeElapsed = finish - start;
         log.info("Elapsed time: " + timeElapsed);
 
-        ContextStore.put("userID", userResponseModel.getId());
         log.success("User is created successfully");
         Assert.assertEquals("Name does not match!", userResponseModel.getName(), name);
         log.info("Name is verified as " + name);

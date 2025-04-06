@@ -11,7 +11,9 @@ public interface ReqresServices {
     String BASE_URL = ReqresAPI.BASE_URL;
 
     @GET(USERS_SUFFIX)
-    Call<UsersListResponse> getUsers(@Query("page") String page);
+    Call<UsersListResponse> getUsers(
+            @Query("page") String page
+    );
 
     @GET(USERS_SUFFIX + ID_SUFFIX)
     Call<GetUserResponse> getUser(
@@ -19,7 +21,9 @@ public interface ReqresServices {
     );
 
     @POST(LOGIN_SUFFIX)
-    Call<LoginResponse> login(@Body UserLoginRequest userLoginRequest);
+    Call<LoginResponse> login(
+            @Body UserLoginRequest userLoginRequest
+    );
 
     @PUT(USERS_SUFFIX + ID_SUFFIX)
     Call<UpdateUserResponse> updateUser(
