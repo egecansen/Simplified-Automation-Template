@@ -45,7 +45,7 @@ Feature: Sauce
     * Save the product names and verify they are in reversed alphabetical order
 
   @Web-UI @SCN-Sauce-3
-  Scenario: Negative login flow
+  Scenario: Login with wrong password
     * Navigate to url: https://www.saucedemo.com/
     * Verify presence of element userNameInput on the LoginPage
     * Click the userNameInput on the LoginPage

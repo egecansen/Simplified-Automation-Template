@@ -367,7 +367,7 @@ public class CommonSteps extends PageObjectStepUtilities<ObjectRepository> {
     public void verifyText(String elementName, String pageName, String expectedText) {
         expectedText = contextCheck(expectedText);
         WebElement element = objectRepository.acquireElementFromPage(elementName, pageName);
-        getInteractions(element).centerElement(element, elementName, pageName);
+        webInteractions.centerElement(element, elementName, pageName);
         pageName = firstLetterDeCapped(pageName);
         webInteractions.verifyText(element, elementName, pageName, expectedText);
     }
@@ -382,7 +382,7 @@ public class CommonSteps extends PageObjectStepUtilities<ObjectRepository> {
     @Given("Verify the text of {} on the {} contains: {}")
     public void verifyContainsText(String elementName, String pageName, String expectedText) {
         WebElement element = objectRepository.acquireElementFromPage(elementName, pageName);
-        getInteractions(element).centerElement(element, elementName, pageName);
+        webInteractions.centerElement(element, elementName, pageName);
         pageName = firstLetterDeCapped(pageName);
         webInteractions.verifyContainsText(element,elementName,pageName,expectedText);
     }
