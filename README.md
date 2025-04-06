@@ -25,7 +25,7 @@ After the run is completed you can find the generated results in the target dire
     ```yml
     mvn clean test -q -Dcucumber.filter.tags="@SCN-Reqres-1"
     ```
-- Deafult driver type is Chrome. To select a browser type, add a browser tag in scenarios. Supported browsers are ```@Firefox```, ```@Safari``` and ```@Chrome```. 
+- Deafult browser type is Chrome. To select a browser type, add a browser tag in scenarios. Supported browsers are ```@Firefox```, ```@Safari``` and ```@Chrome```. 
 
 - Tests can be run headless by modifying the headless property in _test.properties_.
 
