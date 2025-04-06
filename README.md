@@ -27,6 +27,6 @@ After the run is completed you can find the generated results in the target dire
     ```
 - Deafult driver type is Chrome. To select a browser type, add a browser tag in scenarios. Supported browsers are ```@Firefox```, ```@Safari``` and ```@Chrome```. 
 
-- Tests can be run headless by modifying the headless property in _test.properties_. This option is works only with ```@Chrome```.
+- Tests can be run headless by modifying the headless property in _test.properties_.
 
 - To be able to use ```@Firefox``` change ```allow-remote-origin=false``` on _test.properties_ file.
