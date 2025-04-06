@@ -35,7 +35,7 @@ Feature: Reqres API
 
   @API-Test @SCN-Reqres-6
   Scenario: Create delayed user
-    * Create and verify user with parameter after 3 seconds:
+    * Create and verify user with 3 seconds delay with following:
       | name | John   |
       | job  | Farmer |
 

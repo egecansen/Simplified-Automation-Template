@@ -657,4 +657,38 @@ public class CommonSteps extends PageObjectStepUtilities<ObjectRepository> {
         ContextStore.put(key, contextCheck(value));
     }
 
+    /**
+     * Given the text of a web element inside a WebComponent,
+     * this method selects the component and then clicks on a specified element within it.
+     *
+     * @param elementFieldName       The field name of the desired element in the WebComponent.
+     * @param elementText            The text that the desired element should contain.
+     * @param componentListName      The name of the list where the component can be found.
+     * @param pageName               The name of the page where the component is located.
+     * @param targetElementFieldName The field name of the element within the component that should be clicked.
+     *                               <p>
+     *                               The function first retrieves the WebComponent from the specified list on the given page,
+     *                               based on the provided field name and text. Then it identifies the target element within the component using
+     *                               the provided targetElementFieldName. Finally, it performs a click interaction on the identified target element.
+     *                               <p>
+     *                               The method assumes that the necessary components and elements exist and are accessible.
+     */
+    @Given("Select component by {} named {} from {} component list on the {} and click the {} element")
+    public void selectComponentByText(
+            String elementFieldName,
+            String elementText,
+            String componentListName,
+            String pageName,
+            String targetElementFieldName) {
+        elementText = contextCheck(elementText);
+        WebComponent component = objectRepository.acquireExactNamedListedComponent(
+                elementFieldName,
+                elementText,
+                componentListName,
+                pageName
+        );
+        WebElement button = pageObjectReflections.getElementFromComponent(targetElementFieldName, component);
+        webInteractions.clickElement(button, targetElementFieldName, pageName);
+    }
+
 }

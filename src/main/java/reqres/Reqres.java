@@ -35,16 +35,16 @@ public class Reqres extends ApiUtilities {
         return perform(updateUserCall, true, true);
     }
 
-    public Response<Void> deleteUser(String id) {
-        log.info("Deleting user..." );
+    public void deleteUser(String id) {
+        log.info("Deleting the user with id " + id);
         Call<Void> deleteUserCall = reqresServices.deleteUser(id);
-        return getResponse(deleteUserCall, true, true);
+        perform(deleteUserCall, true, true);
     }
 
-    public Response<CreateUserResponse> createDelayedUser(GenericUserRequest genericUserRequest, String delay) {
-        log.info("Creating delayed user..." );
+    public CreateUserResponse createDelayedUser(GenericUserRequest genericUserRequest, String delay) {
+        log.info("Creating the user...");
         Call<CreateUserResponse> createUserCall = reqresServices.createDelayedUser(genericUserRequest, delay);
-        return getResponse(createUserCall, true, true);
+        return perform(createUserCall, true, true);
     }
 
 }

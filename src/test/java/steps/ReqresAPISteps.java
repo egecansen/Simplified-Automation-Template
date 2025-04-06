@@ -103,7 +103,7 @@ public class ReqresAPISteps {
         reqres.deleteUser(id);
         log.success("User is deleted successfully");
     }
-    @Given("Create and verify user with parameter after {} seconds:")
+    @Given("Create and verify user with {} seconds delay with following:")
     public void createDelayedUser(String seconds, DataTable table) {
         Map<String, String> tableMap = table.asMap();
         String name = tableMap.get("name");
@@ -111,17 +111,16 @@ public class ReqresAPISteps {
         GenericUserRequest genericUserRequest = new GenericUserRequest(name, job);
 
         long start = System.currentTimeMillis();
-        Response<CreateUserResponse> userResponseModel = reqres.createDelayedUser(genericUserRequest, seconds);
+        CreateUserResponse userResponseModel = reqres.createDelayedUser(genericUserRequest, seconds);
         long finish = System.currentTimeMillis();
         long timeElapsed = finish - start;
         log.info("Elapsed time: " + timeElapsed);
 
-        assert userResponseModel.body() != null;
-        ContextStore.put("userID", userResponseModel.body().getId());
+        ContextStore.put("userID", userResponseModel.getId());
         log.success("User is created successfully");
-        Assert.assertEquals("Name does not match!", userResponseModel.body().getName(), name);
+        Assert.assertEquals("Name does not match!", userResponseModel.getName(), name);
         log.info("Name is verified as " + name);
-        Assert.assertEquals("Job does not match!",userResponseModel.body().getJob(), job);
+        Assert.assertEquals("Job does not match!",userResponseModel.getJob(), job);
         log.info("Job is verified as " + job);
 
     }
