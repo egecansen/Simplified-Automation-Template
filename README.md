@@ -1,4 +1,4 @@
-# spriteCloud-TA-assignment
+# Simplified Automation Template
 
 This project is a template project that includes UI & API interactions.
 
