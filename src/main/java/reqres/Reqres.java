@@ -4,12 +4,16 @@ import api_assured.ApiUtilities;
 import api_assured.ResponsePair;
 import api_assured.ServiceGenerator;
 import models.*;
+import okhttp3.Headers;
 import retrofit2.Call;
 import retrofit2.Response;
 
 public class Reqres extends ApiUtilities {
 
-    static ReqresServices reqresServices = new ServiceGenerator().generate(ReqresServices.class);
+    static ReqresServices reqresServices = new ServiceGenerator(
+            new Headers.Builder()
+                    .add("x-api-key", "reqres-free-v1").build()
+    ).generate(ReqresServices.class);
 
     public UsersListResponse getUserList(String page) {
         log.info("Acquiring list of users from page number " + page);

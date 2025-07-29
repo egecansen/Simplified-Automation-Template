@@ -129,7 +129,7 @@ public class ReqresAPISteps {
     public void verifyTheLoginError(String errorMessage) {
         LoginErrorResponse loginErrorResponse = ContextStore.get("loginErrorResponse");
         Assert.assertEquals("Error message does not match!", errorMessage, loginErrorResponse.getError());
-        log.success("The errror message is verified as " + errorMessage);
+        log.success("The error message is verified as " + errorMessage);
     }
 
 }
